@@ -542,13 +542,14 @@ class Lines():
       
 ###############################################################################
 
-def data2Server():
+def data2Server(sizes=None):
 
-    values = [  37.5,   22.0,  105.0,  40.0,  90.0,  20.0, 
-               117.5,  100.0,  125.0,  12.5,  32.5,  35.0, 
-                22.5,   28.5,   15.0,  14.0  ]    
+    if sizes==None:
+        sizes = [  37.5,   22.0,  105.0,  40.0,  90.0,  20.0, 
+                  117.5,  100.0,  125.0,  12.5,  32.5,  35.0, 
+                   22.5,   28.5,   15.0,  14.0  ]    
         
-    bdc = BasicBodice(values)
+    bdc = BasicBodice(sizes)
     bdcData = bdc.getBodiceOutput()
     
     return bdcData
